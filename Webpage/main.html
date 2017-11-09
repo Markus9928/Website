@@ -1,11 +1,77 @@
 <html>
     <head>
         <title>1984</title>
-        <link rel="stylesheet" href="content.css">
-    </head>
-    <body style="bg">
-        <t1>hallo</t1>
-    
+        <script>
+            function resize(){
+                var a = getElementById("background")
+                a.height = innerHeight;
+                a.width = innerWidth;
+
+            }
+        </script>
+
+
+    <body id="background" style="background-image:url(../Bilder/background.png);   
+       background-repeat:no-repeat;
+       background-size:cover;" onload="resize()">
+        <center><img src="../Bilder/1984.png" height=400px align="middle"></center>
+        <div id="container">
+            <center><canvas id="c1" height=200px width=200px></canvas></center>
+        </div>
+        <script>
+            var id = setInterval(frame, 5);
+            var i = 1000;
+            var j = 700;
+            var h = 400;
+            
+            var canvas = document.getElementById("c1");
+            var ctx = canvas.getContext("2d");
+            var x = canvas.width /2;
+            var y = canvas.height /2;
+            function frame() {
+                if (i==-1) {
+                    clearInterval(id);
+                } else {
+                    i--;
+                    j--;
+                    h--;
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+                    ctx.strokeStyle = 'rgba(255,255,255,0.2)'
+                    ctx.beginPath();
+                    ctx.arc(x, y, 20, 0, 2 * Math.PI);
+                    ctx.fill();
+                    alpha=i/1000;             
+                    ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+                    ctx.beginPath();
+                    ctx.arc(x, y, 20+(i*0.06), 0, 2 * Math.PI);
+                    ctx.stroke();
+                    ctx.strokeStyle = 'rgba(255,255,255,0.05)'
+                    ctx.beginPath();
+                    ctx.arc(x, y, 20+(j*0.06), 0, 2 * Math.PI);
+                    ctx.stroke();
+                    alpha=h/1000; 
+                    ctx.strokeStyle = 'rgba(255,255,255,0.05)'
+                    ctx.beginPath();
+                    ctx.arc(x, y, 20+(h*0.06), 0, 2 * Math.PI);
+                    ctx.stroke();
+               
+                    if(i==0){
+                        i=1000;
+                    }
+                    if(j==0){
+                        j=1000;
+                    }
+                    if(h==0){
+                        h=1000;
+                    }
+                    
+            }
+        }
+        </script>
     </body>
 
 </html>
+
+
+
