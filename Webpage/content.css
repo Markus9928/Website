@@ -1,0 +1,26 @@
+#background{
+    background-color: #202020;
+}
+#container{
+    position:fixed;
+    top: 60%;
+    left: 50%;
+}
+#divright{
+    right:50%;
+    height:100%;
+    width:50%; 
+    float: right;
+    background:green;
+}
+#divleft{
+    left:50%;
+    width:50%; 
+    float: left;
+    height:100%;
+    background:yellow;
+}
+#pic{
+    height 20%;
+    transition: all 2s ease-in-out; 
+}

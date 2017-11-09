@@ -1,25 +1,27 @@
 <html>
     <head>
         <title>1984</title>
+        <link rel="stylesheet" href="main.css">
         <script>
-            function resize(){
-                var a = getElementById("background")
-                a.height = innerHeight;
-                a.width = innerWidth;
-
+            function next(){
+               document.getElementById("gradual").style.background = '#202020';
+                
+                setTimeout(function(){
+                   window.location.href = 'content.html';
+                }, 2000);
+                
             }
         </script>
+    </head>
 
 
-    <body id="background" style="background-image:url(../Bilder/background.png);   
-       background-repeat:no-repeat;
-       background-size:cover;" onload="resize()">
-        <center><img src="../Bilder/1984.png" height=400px align="middle"></center>
+    <body id="background">
+        <div id="gradual">
         <div id="container">
-            <center><canvas id="c1" height=200px width=200px></canvas></center>
+            <center><canvas onclick="next()"id="c1" height=200px width=200px></canvas></center>
         </div>
         <script>
-            var id = setInterval(frame, 5);
+            var id = setInterval(frame, 7);
             var i = 1000;
             var j = 700;
             var h = 400;
@@ -36,8 +38,8 @@
                     j--;
                     h--;
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
-                    ctx.strokeStyle = 'rgba(255,255,255,0.2)'
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                    ctx.strokeStyle = 'rgba(255,255,255,0.5)'
                     ctx.beginPath();
                     ctx.arc(x, y, 20, 0, 2 * Math.PI);
                     ctx.fill();
@@ -69,6 +71,7 @@
             }
         }
         </script>
+    </div>
     </body>
 
 </html>
