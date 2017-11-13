@@ -2,6 +2,8 @@
         <head>
             <title>1984</title>
             <link rel="stylesheet" href="content.css">
+            <script src="jquery-3.2.1.min.js"></script>
+            <script src="typewriter.js"></script>
         </head>
     
     
@@ -10,14 +12,20 @@
             <div id="divleft">
                 <div>
                     <h1 id="h1"></h1>
+                    <h2 id="h2"></h2>
+                    <p id="p"></p>
                 </div>
+            </div>
+            <div id="divright">
+                <img id="image" src="../Bilder/london.jpg"/>
             </div>
             <script>
                 loadh1();
                 function loadh1(){
-                    console.log("change text entered");
-                    var e = document.getElementById("h1").innerHTML = "London"
-                    e.style;
+                    var e = document.getElementById("h1").innerHTML = "London";
+                    document.getElementById("h2").innerHTML = "1984";
+                    document.getElementById("p").innerHTML = "lorem ipsum"
+                    
                 }
             </script>
             
