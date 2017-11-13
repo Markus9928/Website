@@ -1,5 +1,5 @@
 #background{
-    background-color: #202020;
+    background-image:url("../Bilder/london.jpg");
 }
 #container{
     position:fixed;
@@ -18,9 +18,13 @@
     width:50%; 
     float: left;
     height:100%;
-    background:yellow;
 }
-#pic{
-    height 20%;
+#image{
+    transition: all 2s ease-in-out; 
+}
+#h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
     transition: all 2s ease-in-out; 
 }

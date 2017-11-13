@@ -6,21 +6,20 @@
     
     
         <body id="background">
-           <!--<div id="divleft">
-               
-        
-            </div> 
-            <div id="divright">
-                    
-             
-             </div> 
-            -->
+            
+            <div id="divleft">
+                <div>
+                    <h1 id="h1"></h1>
+                </div>
+            </div>
             <script>
-                function fadeImg(){
-                   
+                loadh1();
+                function loadh1(){
+                    console.log("change text entered");
+                    var e = document.getElementById("h1").innerHTML = "London"
+                    e.style;
                 }
             </script>
-            <img onload="fadeImg()" id= "pic">
             
         </body>
     

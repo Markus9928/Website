@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="main.css">
         <script>
             function next(){
-               document.getElementById("gradual").style.background = '#202020';
-                
+                document.getElementById("gradual").style.background = '#202020';
+                gradualDecrease();
                 setTimeout(function(){
                    window.location.href = 'content.html';
                 }, 2000);
@@ -23,39 +23,58 @@
         <script>
             var id = setInterval(frame, 7);
             var i = 1000;
-            var j = 700;
-            var h = 400;
+            var j = 800;
+            var h = 600;
+            var f = 400;
+            var o = 200;
             
             var canvas = document.getElementById("c1");
             var ctx = canvas.getContext("2d");
             var x = canvas.width /2;
             var y = canvas.height /2;
+            var grad = false;
+
+            function gradualDecrease(){
+                grad=true;
+
+            }
             function frame() {
-                if (i==-1) {
-                    clearInterval(id);
-                } else {
+                 
                     i--;
                     j--;
                     h--;
+                    f--;
+                    o--;
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-                    ctx.strokeStyle = 'rgba(255,255,255,0.5)'
+                    ctx.fillStyle = 'rgba(200, 200, 200, 0.6)';
+                    ctx.strokeStyle = 'rgba(200,200,200,0.5)'
                     ctx.beginPath();
                     ctx.arc(x, y, 20, 0, 2 * Math.PI);
                     ctx.fill();
-                    alpha=i/1000;             
-                    ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+                    alpha=0.6-0.0006*i;             
+                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')';
                     ctx.beginPath();
                     ctx.arc(x, y, 20+(i*0.06), 0, 2 * Math.PI);
                     ctx.stroke();
-                    ctx.strokeStyle = 'rgba(255,255,255,0.05)'
+                    alpha=0.6-0.0006*j; 
+                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
                     ctx.beginPath();
                     ctx.arc(x, y, 20+(j*0.06), 0, 2 * Math.PI);
                     ctx.stroke();
-                    alpha=h/1000; 
-                    ctx.strokeStyle = 'rgba(255,255,255,0.05)'
+                    alpha=0.6-0.0006*h; 
+                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
                     ctx.beginPath();
                     ctx.arc(x, y, 20+(h*0.06), 0, 2 * Math.PI);
+                    ctx.stroke();
+                    alpha=0.6-0.0006*f; 
+                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
+                    ctx.beginPath();
+                    ctx.arc(x, y, 20+(f*0.06), 0, 2 * Math.PI);
+                    ctx.stroke();
+                    alpha=0.6-0.0006*o; 
+                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
+                    ctx.beginPath();
+                    ctx.arc(x, y, 20+(o*0.06), 0, 2 * Math.PI);
                     ctx.stroke();
                
                     if(i==0){
@@ -67,9 +86,19 @@
                     if(h==0){
                         h=1000;
                     }
-                    
+                    if(f==0){
+                        f=1000;
+                    }
+                    if(o==0){
+                        o=1000;
+                    } 
+                    if (grad) {
+                        ctx.fillstyle='rgba(20,20,20,0.05)';
+                        ctx.clearRect(0,0,canvas.width, canvas.height);
+                        
+                    }
+            
             }
-        }
         </script>
     </div>
     </body>
