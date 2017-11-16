@@ -20,12 +20,33 @@
                 <img id="image" src="../Bilder/london.jpg"/>
             </div>
             <script>
-                loadh1();
-                function loadh1(){
+                var nT=0;
+                var pText = ["Text1" , "Text2", "text3"]
+                loadText();
+
+                function loadText(){
                     var e = document.getElementById("h1").innerHTML = "London";
                     document.getElementById("h2").innerHTML = "1984";
-                    document.getElementById("p").innerHTML = "lorem ipsum"
-                    
+                    document.getElementById("p").innerHTML = pText[nT]
+                }
+                document.addEventListener("click", function(){
+                    nT++;
+                    if(nT<3){
+                        loadText();
+                        document.getElementById("p").style.color='rgba(255,255,255,0)';
+                       
+                       reloadElement("p");
+                    }  
+                    else{
+                        continuetoAuthor();
+                    }
+                });
+
+
+                function reloadElement(id){
+                    var element = document.getElementById(id);
+                    var newElement = element.cloneNode(true);
+                    element.parentElement.replaceChild(newElement, element);
                 }
             </script>
             
