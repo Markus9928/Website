@@ -56,13 +56,14 @@
 #h1{
     padding-left:100px;
     font-size: 50px;
-    color:rgba(0,0,0,0);    
+    color:rgba(255,255,255,0.7);
+    /*color:rgba(0,0,0,0);    
     animation-name:fadeIn;
     animation-delay:1s;
     animation-duration:2s;
     animation-iteration-count:1;
     animation-fill-mode:forwards;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;*/
 
 }
 @keyframes fadeIn{
@@ -89,22 +90,25 @@
 #h2 {
     padding-left: 100px;
     font-size: 30px;
+    color:rgba(255,255,255,0.7);
+    /*
     color: rgba(0,0,0,0);
     
     animation-name: fadeIn;
     animation-delay: 2s;
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
 }
 #p{
     padding-left: 100px;
     font-size: 20px;
+    color:rgba(255,255,255,0.7);/*
     color: rgba(0,0,0,0);
     
     animation-name: fadeIn;
     animation-delay: 2s;
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
 }

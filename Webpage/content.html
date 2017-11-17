@@ -11,9 +11,18 @@
             
             <div id="divleft">
                 <div>
-                    <h1 id="h1"></h1>
-                    <h2 id="h2"></h2>
-                    <p id="p"></p>
+                    
+                    <h1 id="h1">
+                        <a class="typewrite" data-period="2000" data-type='[ "London" ]'>
+                          <span class="wrap"></span>
+                        </a>
+                    </h1>
+                    <h2 id="h2"><a class="typewrite" data-period="2000" data-type='[ "1984" ]'>
+                        <span class="wrap"></span>
+                      </a></h2>
+                    <p id="p"><a class="typewrite" data-period="2000" data-type='[ "Lorem Ipsum dolor et keine ahnung wias weitergeat", "und donn kimp des und text text text text etc lorem ipsum uns so" ]'>
+                        <span class="wrap"></span>
+                      </a></p>
                 </div>
             </div>
             <div id="divright">
@@ -25,7 +34,7 @@
                 loadText();
 
                 function loadText(){
-                    var e = document.getElementById("h1").innerHTML = "London";
+                    //var e = document.getElementById("h1").innerHTML = "London";
                     document.getElementById("h2").innerHTML = "1984";
                     document.getElementById("p").innerHTML = pText[nT]
                 }
