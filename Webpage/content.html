@@ -13,39 +13,44 @@
                 <div>
                     
                     <h1 id="h1">
-                        <a class="typewrite" data-period="2000" data-type='[ "London" ]'>
-                          <span class="wrap"></span>
-                        </a>
+                        London
                     </h1>
-                    <h2 id="h2"><a class="typewrite" data-period="2000" data-type='[ "1984" ]'>
-                        <span class="wrap"></span>
-                      </a></h2>
-                    <p id="p"><a class="typewrite" data-period="2000" data-type='[ "Lorem Ipsum dolor et keine ahnung wias weitergeat", "und donn kimp des und text text text text etc lorem ipsum uns so" ]'>
-                        <span class="wrap"></span>
-                      </a></p>
+                    <h2 id="h2">
+                        1984
+                    </h2>
+                    <p id="p"><a class="typewrite" data-period="2000" data-type='[ "In a world divided into three massive states whose society is coined by supervision and constant propaganda, we follow the story of a man named Winston Smith. He is by no means extraordinary. He isn’t especially strong or handsome. But unlike many, he questions what the government tells him. He doubts that as they say: the capitalists could rape every woman they wanted at any time and that they were free of any prosecution for any crime they may commit. He is committing thoughtcrime. He does not follow the ideology of the government, simply called the party. He as a member of the outer party that section of the party members that has no power and is still the most surveiled part of the society. Because they would be the most likely to start a rebellion. " ]'>
+                        <span class="wrap">Lorem Ipsum Dolor</span>
+                      </a>
+                    </p>
                 </div>
             </div>
             <div id="divright">
-                <img id="image" src="../Bilder/london.jpg"/>
+                <img id="image" src="../Bilder/cover.jpg"/>
             </div>
             <script>
                 var nT=0;
-                var pText = ["Text1" , "Text2", "text3"]
+                var pText = ["" 
+                , "The party, the ruling government, is represented by Big Brother. He is pictured on huge posters put up on basically every wall. He watches everyone at every time. Therefore he is decorated by the phrase: Big Brother is watching you. Winston dislikes the Party, but he dares not say anything against it. In these times saying something against the party can get you a free visit of the Ministry of Love – The Biggest Prison a torture facility in Oceania. If you are lucky you might get away with just a decade or two in one of the labour camps outside of the city perimeters. Anyways you shouldn’t say anything. It is always best to just keep your mouth shut because the people who talk a lot are most likely to say something wrong at some point. "
+                , "With the constant surveillance you are not only unable to talk about these things. Your every step, your every move your everything can be watched at any time and everything can give you away. A nervous twitch on your face, noticed by one of the thousands and thousands of Telescreens can cost you your life. One wrong word, one sentence that was pronounced differently than expected can make you end up in a labour camp, or worse in the Ministry of Love, from where only few came back. But those who came back, were broken people afterwards. They had no power left to fight. They were mere corpses, walking, drinking the terrible tasting Victory Gin that is being issued by the government and breathing. But they long ago stopped thinking. "
+                , ""
+                , ""];
+                var pictures = ["cover.jpg", "london.jpg"];
                 loadText();
 
                 function loadText(){
-                    //var e = document.getElementById("h1").innerHTML = "London";
+                    var e = document.getElementById("h1").innerHTML = "London";
                     document.getElementById("h2").innerHTML = "1984";
-                    document.getElementById("p").innerHTML = pText[nT]
-                }
+                    }
                 document.addEventListener("click", function(){
                     nT++;
-                    if(nT<3){
-                        loadText();
-                        document.getElementById("p").style.color='rgba(255,255,255,0)';
+                    if(nT<4){
+                        
+                        document.getElementById("p").innerHTML = "<a class=\"typewrite\" data-period=\"1000\" data-type='[ \"" + pText[nT] + "\" ]'\><span class=\"wrap\">Lorem Ipsum Dolor</span\></a>";
+                        document.getElementById("divright").innerHTML = "<img id=\"image\" src=\"../Bilder/"+ pictures[nT%2]+"\"/>"
                        
                        reloadElement("p");
-                    }  
+                       reloadElement("divright");
+                    } 
                     else{
                         continuetoAuthor();
                     }

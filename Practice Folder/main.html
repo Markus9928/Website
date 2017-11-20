@@ -1,4 +1,4 @@
-<!DOCTXPE html>
+<!DOCTYPE html>
 <html lang="en-UK">
     <head>
         <title>1984</title>
@@ -15,7 +15,9 @@
         <p>this is a paragraph</p>
         <br/>
         <p>this is a paragraph after a break</p>
-        <img src="picture.jpg" width="200" alt="Ashe looking really cute" title="chibi ashe">
+        <div id="hello">
+            <img src="picture.jpg" width="200" alt="Ashe looking really cute" title="chibi ashe">
+        </div>
         <p title="i'm a title">this is a paragraph</p>
         <a href="https://google.com">This is a hyperlink</a>
         <pre>
@@ -24,6 +26,10 @@
             i dont like the look of it though 
 really gotta start all the way over here for it to work properly
         </pre>
+        <script>
+        document.getElementById("hello").innerHTML="<img src=\"picture.jpg\" width=\"1000\">"
+        </script>
+        
         <bdo dir="rtl">This text will be written from right to left</bdo>
     </body>
 

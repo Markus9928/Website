@@ -1,3 +1,4 @@
+
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -21,7 +22,7 @@ TxtType.prototype.tick = function() {
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
     var that = this;
-    var delta = 200 - Math.random() * 100;
+    var delta = 100 - Math.random() * 80;
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -43,11 +44,12 @@ window.onload = function() {
 startAnimation();
 };
 window.onclick = function(){
-    console.log("Entered here");
+    startAnimation();
     
 }
 function startAnimation(){
     var elements = document.getElementsByClassName('typewrite');
+    
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
         var period = elements[i].getAttribute('data-period');
@@ -59,6 +61,6 @@ function startAnimation(){
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 5px solid rgba(255,255,255,0.7)}";
+    css.innerHTML = ".typewrite > .wrap {}";
     document.body.appendChild(css);
 }
