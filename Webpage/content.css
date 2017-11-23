@@ -73,7 +73,7 @@
 
 }
 @keyframes fadeIn{
-    from{color:rgba(0,0,0,0)}
+    from{color:rgba(0, 0, 0, 0)}
     to{
        color:rgba(255,255,255,0.7);
        transform:translate(-3%,-3%);
