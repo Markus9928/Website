@@ -2,10 +2,66 @@
 <html>
     <head>
         <title>1984 - Author</title>
+        <link rel="stylesheet" href="author.css">
     </head>
     <body id="background_Author">
-        <div><h1 style="align-content: center">About the Author</h1></div>
-        <div><img src=../Bilder/author.png></div>
+        <div style="height:100%;width:100%;margin-top:0px;position:absolute;">
+            
+                <canvas id="canvas" height=100% width=100%></canvas>
+                <script src="snow.js"></script>
+        </div>  
+        <div><center><h1 id="caption">About the Author</h1></center></div>
+        <div class="about">
+        <div id="about_div"><img src="../Bilder/orwell.jpg" id="orwell"></img></div>
+        <p>George Orwell, born as Eric Arthur Blair, was a 20th century dytopian author. His most famous works are 1984 and Animal Farm. He was born in Burmeo as the son of a respected but not very wealthy family<br/>He studied in Oxford but he did not dedicate too much of his time to his studies. He lived during the World Wars and therefore he had a good picture of the effect of war and he had also see the rise and fall of different totalitarian regimes, such as Hitler in Nazi-Germany or Mussolini in Italy. He was also a supporter of the socialists which can all be found also in his books. He used his books, over all 1984 as a warning for all of us. He wanted to show people the worst he could immagine as a way of telling them to make sure not to ever let this happen in reality. He also worked with the Burmese Police as a police officer which as you can immagine sometimes tortured people. This can also be seen in his books such as in the various torture scenes in 1984.<br/>He was married 2 times, the first time with Eleen Maud Blair and the second time with Sonja Brownell who was also the model for Julia in 1984, because she worked in the Ministry of Information which was a British Ministry during WW2 tasked with creating propaganda. <br/>Orwell died in 1950 aging only 46 in the University College Hospital in London </p>
+        </div>
+        <div style="clear:both"></div>
+        
+        
+        
+        
+    <div class="main">
+    <h1>Other Works</h1>
+    <hr> 
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="../Bilder/work_animal.jpg" alt="Animal Farm" style="width:100%;">
+          <h3>Animal Farm</h3>
+         
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="../Bilder/work_road.jpg" alt="The road to Wigan Pier" style="width:100%">
+          <h3>The road to Wigan Pier</h3>
+        
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="../Bilder/work_catalonia.jpg" alt="Homage to Catalonia" style="width:100%">
+          <h3>Homage to Catalonia</h3>
+         
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="../Bilder/work_burmese.jpg" alt="Burmese Days" style="width:100%">
+          <h3>Burmese Days</h3>
+      
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+        function continuetoEndscreen(){
+          window.location.href =("endscreen.html");
+      }
+      </script>
+      <div id="continue">
+          <center><p onclick="continuetoEndscreen()">Click here to continue</p></center>
+      </div>
     </body>
     
 </html>

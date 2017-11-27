@@ -1,24 +1,35 @@
+@font-face {
+    font-family: "confidential";
+    src: url("Confidential-Regular.woff") format('woff');
+}
 #background{
     background-color: #000000;
     background-image:url(../Bilder/background.png);
-    
+    background-size:cover;
     background-repeat:no-repeat;
     background-size:cover;
+    user-select: none;
+    overflow:hidden;
+    height:100%;
+    width:100%;
     
 }
-#container{
-    position:fixed;
-    top: 60%;
-    left: 50%;
+#click_anywhere{
+  position:absolute;
+  left:50%;
+  font-family: confidential;
+  top:80%;
+  font-size: 50px;
+  color:white;
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
 }
-#gradual{
-    width: 100%;
-    height:100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-    transition: all 2s ease-in-out; 
+@keyframes fadein{
+from{opacity: 0;}
+to{opacity:0.8}
 }

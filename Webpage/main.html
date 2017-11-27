@@ -2,107 +2,26 @@
     <head>
         <title>1984</title>
         <link rel="stylesheet" href="main.css">
-        <script>
-            function next(){
-                document.getElementById("gradual").style.background = '#000000';
-                gradualDecrease();
-                setTimeout(function(){
-                   window.location.href = 'content.html';
-                }, 2000);
-                
-            }
-        </script>
+        <script src="jquery-3.2.1.min.js"></script>
     </head>
-
+    
 
     <body id="background">
         <div id="gradual">
-        <div id="container">
-            <center><canvas onclick="next()"id="c1" height=200px width=200px></canvas></center>
+            <div id="click_anywhere">
+                <p>Click anywhere to Continue</p>
+            </div>
         </div>
-        <script>
-            var id = setInterval(frame, 7);
-            var i = 1000;
-            var j = 800;
-            var h = 600;
-            var f = 400;
-            var o = 200;
-            
-            var canvas = document.getElementById("c1");
-            var ctx = canvas.getContext("2d");
-            var x = canvas.width /2;
-            var y = canvas.height /2;
-            var grad = false;
-
-            function gradualDecrease(){
-                grad=true;
-
-            }
-            function frame() {
-                 
-                    i--;
-                    j--;
-                    h--;
-                    f--;
-                    o--;
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    ctx.fillStyle = 'rgba(200, 200, 200, 0.6)';
-                    ctx.strokeStyle = 'rgba(200,200,200,0.5)'
-                    ctx.beginPath();
-                    ctx.arc(x, y, 20, 0, 2 * Math.PI);
-                    ctx.fill();
-                    alpha=0.6-0.0006*i;             
-                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')';
-                    ctx.beginPath();
-                    ctx.arc(x, y, 20+(i*0.06), 0, 2 * Math.PI);
-                    ctx.stroke();
-                    alpha=0.6-0.0006*j; 
-                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
-                    ctx.beginPath();
-                    ctx.arc(x, y, 20+(j*0.06), 0, 2 * Math.PI);
-                    ctx.stroke();
-                    alpha=0.6-0.0006*h; 
-                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
-                    ctx.beginPath();
-                    ctx.arc(x, y, 20+(h*0.06), 0, 2 * Math.PI);
-                    ctx.stroke();
-                    alpha=0.6-0.0006*f; 
-                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
-                    ctx.beginPath();
-                    ctx.arc(x, y, 20+(f*0.06), 0, 2 * Math.PI);
-                    ctx.stroke();
-                    alpha=0.6-0.0006*o; 
-                    ctx.strokeStyle = 'rgba(200,200,200,'+alpha+')'
-                    ctx.beginPath();
-                    ctx.arc(x, y, 20+(o*0.06), 0, 2 * Math.PI);
-                    ctx.stroke();
-               
-                    if(i==0){
-                        i=1000;
-                    }
-                    if(j==0){
-                        j=1000;
-                    }
-                    if(h==0){
-                        h=1000;
-                    }
-                    if(f==0){
-                        f=1000;
-                    }
-                    if(o==0){
-                        o=1000;
-                    } 
-                    if (grad) {
-                        ctx.fillstyle='rgba(20,20,20,0.05)';
-                        ctx.clearRect(0,0,canvas.width, canvas.height);
-                        
-                    }
-            
-            }
-        </script>
-    </div>
+        <div style="height:100%;width:100%;margin-top:0px;position:absolute;">
+                <canvas id="canvas" height=100% width=100%></canvas>
+                <script src="snow.js"></script>
+        </div>  
     </body>
-
+    <script>
+    window.onclick = function(){
+    window.location.href = ("content.html");
+    }
+    </script>
 </html>
 
 

@@ -46,7 +46,7 @@ startAnimation();
 window.onclick = function(){
     startAnimation();
     
-}
+};
 function startAnimation(){
     var elements = document.getElementsByClassName('typewrite');
     

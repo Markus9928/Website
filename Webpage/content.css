@@ -2,7 +2,8 @@
     background-color:black;
     height:100%;
     width:100%;
-    overflow:hidden;
+    overflow: hidden;
+    user-select: none;
     font-family: "confidential";
 }
 @font-face {
@@ -19,8 +20,9 @@
     right: 50%;
     height: 100%;
     width: 45%;
-    float: left;
-    padding-right:5%;
+    float: right;
+    padding-right:3%;
+    
    
    
    animation-name:animatedBackground;
@@ -106,12 +108,30 @@
 #p{
     padding-left: 100px;
     font-size: 22px;
-    color:rgba(255,255,255,0.7);/*
+    color:rgba(255,255,255,0.7);
     color: rgba(0,0,0,0);
     
     animation-name: fadeIn;
-    animation-delay: 2s;
     animation-duration: 2s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;*/
+    animation-fill-mode: forwards;
 }
+#continue{
+    position:absolute;
+    margin-left:5%;
+    font-family: confidential;
+    top:80%;
+    font-size: 50px;
+    color:white;
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  
+  }
+  @keyframes fadein{
+  from{opacity: 0;}
+  to{opacity:0.8}
+  }

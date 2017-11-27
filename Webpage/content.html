@@ -5,48 +5,54 @@
             <script src="jquery-3.2.1.min.js"></script>
             <script src="typewriter.js"></script>
         </head>
-    
-    
-        <body id="background">
+        <body id="background" unselectable=on>
             
             <div id="divleft">
-                <div>
+                <div style="height:50%; overflow:hidden;">
                     
                     <h1 id="h1">
-                        London
+                        1984
                     </h1>
                     <h2 id="h2">
-                        1984
+                        London, Air Strip 1
                     </h2>
-                    <p id="p"><a class="typewrite" data-period="2000" data-type='[ "In a world divided into three massive states whose society is coined by supervision and constant propaganda, we follow the story of a man named Winston Smith. He is by no means extraordinary. He isn’t especially strong or handsome. But unlike many, he questions what the government tells him. He doubts that as they say: the capitalists could rape every woman they wanted at any time and that they were free of any prosecution for any crime they may commit. He is committing thoughtcrime. He does not follow the ideology of the government, simply called the party. He as a member of the outer party that section of the party members that has no power and is still the most surveiled part of the society. Because they would be the most likely to start a rebellion. " ]'>
-                        <span class="wrap">Lorem Ipsum Dolor</span>
+                    <p id="p"><a class="typewrite" data-period="2000" data-type='[ "" ]'>
+                        <span class="wrap">In a world divided into three massive states whose society is coined by supervision and constant propaganda, we follow the story of a man named Winston Smith. He is by no means extraordinary. He isn’t especially strong or handsome. But unlike many, he questions what the government tells him. He doubts that as they say: the capitalists could rape every woman they wanted at any time and that they were free of any prosecution for any crime they may commit. He is committing thoughtcrime. He does not follow the ideology of the government, simply called the party. He as a member of the outer party that section of the party members that has no power and is still the most surveiled part of the society. Because they would be the most likely to start a rebellion. </span>
                       </a>
                     </p>
                 </div>
+                <div id="continue">
+                    <p>Click anywhere to continue</p>
+                </div>
             </div>
+            <div style="width:3%; float:left;"></div>
             <div id="divright">
-                <img id="image" src="../Bilder/cover.jpg"/>
+                <img id="image" src="../Bilder/london.gif"/>
             </div>
             <script>
                 var nT=0;
                 var pText = ["" 
                 , "The party, the ruling government, is represented by Big Brother. He is pictured on huge posters put up on basically every wall. He watches everyone at every time. Therefore he is decorated by the phrase: Big Brother is watching you. Winston dislikes the Party, but he dares not say anything against it. In these times saying something against the party can get you a free visit of the Ministry of Love – The Biggest Prison a torture facility in Oceania. If you are lucky you might get away with just a decade or two in one of the labour camps outside of the city perimeters. Anyways you shouldn’t say anything. It is always best to just keep your mouth shut because the people who talk a lot are most likely to say something wrong at some point. "
                 , "With the constant surveillance you are not only unable to talk about these things. Your every step, your every move your everything can be watched at any time and everything can give you away. A nervous twitch on your face, noticed by one of the thousands and thousands of Telescreens can cost you your life. One wrong word, one sentence that was pronounced differently than expected can make you end up in a labour camp, or worse in the Ministry of Love, from where only few came back. But those who came back, were broken people afterwards. They had no power left to fight. They were mere corpses, walking, drinking the terrible tasting Victory Gin that is being issued by the government and breathing. But they long ago stopped thinking. "
-                , ""
-                , ""];
-                var pictures = ["cover.jpg", "london.jpg"];
+                , "Winston works in the Ministry of Truth, a facility concerned with forging documents and changing History. Everything Big Brother or the Party, who are by the way the only sources of news there are, is kept here and being constantly changed by the employees of the Ministry. A promise that had been made by Big Brother and was not reached, gets changed to say something completely different. If Big Brother said they were at war with a certain state, and after some years they ended up signing a peace treaty, the Ministry of Truth rewrites every record that said they were at war and in doing so they basically change history."
+                , "The people are used to a practice called “Doublethink” they are capable of believing in something that is obviously false as long as the government tells them to. So if the government told them that 2+2 was 5 they would believe it as if it was a truth that had been proven countless times. The people are being conditioned that way from soon after they are born. They join marching groups or go on community hikes where the government brainwashes them into sometimes even denouncing their own parents to the Thoughtpolice when they noticed some kind of behaviour that might be against the Party. "
+                , "With Winston works also a older man called O’Brian. He is part of the inner party and he seems to Winston like a likeminded person. In the eyes of Winson O’brian must be a part of the Revolutionary force of which one can hear once in a while but whose doings have never been officially mentioned. He himself would like to join this Revolution because he has a deep hate for the party and Big Brother deep within him. "
+                , "At his workplace he also falls in love with the beautiful dark-haired girl Julia. She is like him a rebel and she likes to break rules which Winston had so far tried to avoid since his life was dear to him. But in even meeting Julia in remote places and with special precautions to not get noticed, he was committing a crime. But they both love each other thoroughly and they both swear to never betray each other. "
+                , "For a long time this goes well until O’Brian reaches out for him one day. He tells him about a resistance group and how to join. Winston is fascinated by the idea of joining the revolution, of finally fighting and uprising against the totalitarian government. Down with Big Brother he thinks. Julia joins his efforts to join the resistance because she loves him. She personally has no hate for Big Brother, mostly because she was not interested in Politics and she was too young to remember the time before the Party had taken over."
+                , "The resistance group was a trap though and both Winston and Julia are being captured and brought into the Ministry of Love. There they are being separated and they are thrown into different cells. The people in these cells come and go but they never come back to the same cell. And so Winston passes his time not knowing what will happen to him, what was happening to Julia, if they will ever meet again or if O’Brian was captured aswell of if he had actually been the traitor."
+                , "Not knowing anything the days passed and finally he gets taken away. In a room he is tortured and they try to break his mind. But he stays strong and keeps true to his believe. They may control our lives but they can never control our thoughts. That is, until he was brought to room 101."];
+                var pictures = ["","bigbrother.jpg", "torture.png", "ingsoc_poster.jpg","crimestop.jpg","propaganda.png","julia.png","warefford.png","winston.png","101.png"];
                 loadText();
 
                 function loadText(){
-                    var e = document.getElementById("h1").innerHTML = "London";
-                    document.getElementById("h2").innerHTML = "1984";
+                   
                     }
                 document.addEventListener("click", function(){
                     nT++;
-                    if(nT<4){
+                    if(nT<10){
                         
                         document.getElementById("p").innerHTML = "<a class=\"typewrite\" data-period=\"1000\" data-type='[ \"" + pText[nT] + "\" ]'\><span class=\"wrap\">Lorem Ipsum Dolor</span\></a>";
-                        document.getElementById("divright").innerHTML = "<img id=\"image\" src=\"../Bilder/"+ pictures[nT%2]+"\"/>"
+                        document.getElementById("divright").innerHTML = "<img id=\"image\" src=\"../Bilder/"+ pictures[nT]+"\"/>"
                        
                        reloadElement("p");
                        reloadElement("divright");
@@ -56,18 +62,22 @@
                     }
                 });
 
-
+                function continuetoAuthor(){
+                    window.location.href =("information.html");
+                }
                 function reloadElement(id){
                     var element = document.getElementById(id);
                     var newElement = element.cloneNode(true);
                     element.parentElement.replaceChild(newElement, element);
                 }
             </script>
+        <div style="height:100%;width:100%;margin-top:0px;position:absolute;">
             
-        </body>
-    
-    </html>
-    
+                <canvas id="canvas" height=100% width=100%></canvas>
+                <script src="snow.js"></script>
+        </div>     
+    </body>          
+</html>
     
     
     
