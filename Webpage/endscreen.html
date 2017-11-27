@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1984 - Author</title>
+        <link rel="stylesheet" href="endscreen.css">
+        <script src="jquery-3.2.1.min.js"></script>
+    </head>
+    <body id="background">
+            <div style="height:100%;width:100%;margin-top:0px;position:absolute;">
+                    <canvas id="canvas" height=100% width=100%></canvas>
+                    <script src="snow.js"></script>
+            </div>  
+            <div id="arrow"></div>
+            <div style="height:300%; background-color:black;">
+                <div id="pic1" class="parallax">
+                </div>
+                <div id="text1">
+                    <center><h1>My Rating</h1></center>
+                    <center><p>I think the Book is one of the greatest books written in the 20th centurie. Not only did I feel as if I was in the story itself while reading but the topics it talks about even haunted me when i was not reading. It was thrilling, shocking educational and sometimes so detailed you might think that Orwell is actually just describing something that realy exists, not something that he immaginated <br/><br/>I rate this book:  <b>double-plus good</b></p></center>
+                    <br/><br/><br/>
+                    <center><h1>The Guardian</h1><p>Perhaps the most powerful, effective and frightening notion of 1984 is that the complete control of an entire nation under a totalitarian state is perfectly possible. If the world fell under the control of one or even multiple dictators, the future could easily become a twisted, cruel world where every movement, word and breath is scrutinised by an omnipotent, omnipresent power that no one can stop, or even oppose without the fear of death.</p><br/><p>Orwell’s novella is a warning for the human race. It highlights the importance of resisting mass control and oppression.</p></center>
+                </div>
+                <div id="pic2" class ="parallax"></div>
+                <div id="text2"><center><h1>Thanks to my Sources who (unknowingly) gave me Pictures and Codesnippets</h1><p>http://www.graphite-art.com/<br/>
+                        https://www.pinterest.com/aillecks/1984-book-cover/<br/>
+                        https://www.redbubble.com<br/>
+                        http://www.picstatio.com/wallpaper/nyc-skyline-artwork-wallpaper-mbefc1<br/>
+                        https://wikipedia.com (for Bookcovers and The Picture of George Orwell)<br/>
+                        All pictures of characters taken from the movie 1984</p></center>
+                </div>
+                <script>
+                function allOverAgain(){
+                    window.location.href =("main.html");
+                }
+                </script>
+                <div id="pic3" class="parallax"></div>
+                <div id="finalWords"><center><p>sponsored by:</p><img src="../Bilder/gin_end.png"></img><h1 style="font-size:70px;" onclick="allOverAgain()">Go Through it again!</h1></center></div>
+            </div>
+            <script>
+                 $(window).scroll(function() {   
+                if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                document.getElementById("arrow").style.opacity=0;
+                 }
+                 else{
+                     document.getElementById("arrow").style.opacity=0.5;
+                 }
+                });
+            </script>
+
+        
+                                                        
+    </body>
+    
+</html>

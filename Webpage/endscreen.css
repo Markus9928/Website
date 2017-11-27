@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "confidential";
+    src: url("Confidential-Regular.woff") format('woff');
+}
+body , html{ height: 100%; width: 100%; margin: 0; }
+#background{
+    background-color:black;
+    font-family:confidential;
+    font-size: 120%;
+    background-size: cover;
+    height: 100%;
+    
+
+}
+
+h1{
+    color:white;
+    opacity:0.7;
+    font-size: 60px;
+    top:40px;
+    
+}
+p{
+    color:white;
+    opacity: 0.8;
+}
+.parallax { 
+   
+    
+
+ 
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:all 1s ease-in-out;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+#pic1:hover{
+    opacity:0.8;
+}
+#pic1{
+    background-image: url("../Bilder/london.png");
+    height:34%;
+}
+#pic2{
+    background-image: url("../Bilder/endscene.gif");
+    height:15%;
+}
+#arrow{
+    height: 80px;
+    width:60px;
+    position:fixed;
+    bottom:0;
+    background-image:url("../Bilder/arrow.gif");
+    background-size: cover;
+    right:50%;
+    opacity:0.5
+
+}
+#text1{
+    height:auto;
+    width: 100%;
+    background-color:Black;
+}
+#text2{
+    height:auto;
+    width: 100%;
+    background-color:black;
+}
+#pic3{
+    height:34%;
+    width:100%;
+    background-image: url("../Bilder/ingsoc.png")
+}
+#finalWords{
+    height:40%;
+    width:100%;
+    padding-top:50%;
+    background-color:rgb(24, 24, 24);
+    padding-top:5px;
+
+}
